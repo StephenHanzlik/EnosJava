@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(
-        name = "stationservlet",
-        urlPatterns = "/station-data"
-)
+//@WebServlet(
+//        name = "stationservlet",
+//        urlPatterns = "/station-data"
+//)
 public class StationServlet extends HttpServlet {
 
     @Override

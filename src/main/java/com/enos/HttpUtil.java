@@ -10,15 +10,18 @@ import org.apache.http.util.EntityUtils;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-//@WebServlet(
-//        name = "stationservlet",
-//        urlPatterns = "/station-data"
-//)
-public class HttpUtil extends HttpServlet {
+@WebServlet(
+        name = "httputil",
+        urlPatterns = "/station-data"
+)
+public class HttpUtil extends HttpServlet{
 
-        public void doGet(String[] arg) throws IOException {
+        @Override
+        public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
             CloseableHttpClient httpClient = HttpClients.createDefault();
 
             try {
