@@ -21,7 +21,7 @@ import java.io.IOException;
 public class HttpUtil extends HttpServlet{
 
         @Override
-        public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
             CloseableHttpClient httpClient = HttpClients.createDefault();
 
             try {
