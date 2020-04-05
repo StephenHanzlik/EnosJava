@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(
-        name = "httputil",
-        urlPatterns = "/station-data"
-)
+//@WebServlet(
+//        name = "httputil",
+//        urlPatterns = "/station-data"
+//)
 public class HttpUtil extends HttpServlet{
 
         @Override

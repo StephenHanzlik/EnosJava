@@ -20,17 +20,17 @@ public class StationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        String stationLocation = req.getParameter("Type");
-
-        StationService stationService = new StationService();
-        Station station = Station.valueOf(stationLocation);
-
-        List stationMetadata = stationService.getStationMetadata(station);
-
-        req.setAttribute("stationMetadata", stationMetadata);
-        RequestDispatcher view = req.getRequestDispatcher("result.jsp");
-        view.forward(req, resp);
+//
+//        String stationLocation = req.getParameter("Type");
+//
+//        StationService stationService = new StationService();
+//        Station station = Station.valueOf(stationLocation);
+//
+//        List stationMetadata = stationService.getStationMetadata(station);
+//
+//        req.setAttribute("stationMetadata", stationMetadata);
+//        RequestDispatcher view = req.getRequestDispatcher("result.jsp");
+//        view.forward(req, resp);
 
     }
 

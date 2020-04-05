@@ -2,43 +2,43 @@ package com.enos;
 
 import com.enos.model.Station;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
 
+import java.util.List;
+
+//https://mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
+//https://mkyong.com/webservices/jax-rs/restful-java-client-with-apache-httpclient/
+
+@Path("/station")
 public class StationService {
 
-    public List getStationMetadata(Station station){
+    @GET
+    @Path("/test")
+    @Produces("application/json")
+    public Station getStation(){
 
-        List stationMetadata = new ArrayList();
+        Station station = new Station();
+        station.setName("Eldora");
+        station.setElevation(9082);
+        station.setWind(false);
 
-        if(station.equals(Station.COLORADO)){
-            stationMetadata.add("Colorado");
-            stationMetadata.add("11,000");
-            stationMetadata.add("12.3892394,-21.901288908");
-        }else if(station.equals(Station.UTAH)){
-            stationMetadata.add("UTAH");
-            stationMetadata.add("10,200");
-            stationMetadata.add("15.6792394,-11.423288908");
-        }else if(station.equals(Station.WASHINGTON)){
-            stationMetadata.add("Washington");
-            stationMetadata.add("6,000");
-            stationMetadata.add("29.3892394,-31.901288908");
-        }else {
-            stationMetadata.add("No Station Found");
-        }
-
-        return stationMetadata;
-
+        return station;
     }
 
-    //Just build the object to return here here
+    //We don't actually want to add stations unless importing the static list of station data
+    @POST
+    @Path("/test")
+    @Consumes("application/json")
+    public Response createStation(Station station){
 
-//    public Map getDailyStationReport(Station station){
-//
-//        Map stationReport;
-//
-//
-//    }
+        String result = "Station created: " + station;
+        return Response.status(201).entity(result).build();
+    }
+
 
 }
