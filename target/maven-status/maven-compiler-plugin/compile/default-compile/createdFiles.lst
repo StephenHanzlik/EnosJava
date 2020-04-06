@@ -2,3 +2,4 @@ com/enos/model/Station.class
 com/enos/StationService.class
 com/enos/HttpUtil.class
 com/enos/StationServlet.class
+com/enos/RestConfig.class
