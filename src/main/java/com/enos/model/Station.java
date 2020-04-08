@@ -1,14 +1,14 @@
 package com.enos.model;
 
 public class Station {
-    int sid;
-    int elevation;
-    int latitude;
-    int longitude;
-    String name;
-    int timezone;
-    String triplet;
-    boolean wind;
+    public int sid;
+    public int elevation;
+    public int latitude;
+    public int longitude;
+    public String name;
+    public int timezone;
+    public String triplet;
+    public boolean wind;
 
     public String getTriplet() {
         return triplet;
@@ -25,5 +25,7 @@ public class Station {
     public void setWind(boolean wind) {
         this.wind = wind;
     }
+
+    public void setTriplet(String triplet) { this.triplet = triplet; }
 
 }

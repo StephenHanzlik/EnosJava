@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
 
 
-//No longer using these.  May be helpful for cleaning up unnecessary configs
+//No longer using these.  May be helpful for cleaning up unnecessary dependencies
 //https://mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
 //https://mkyong.com/webservices/jax-rs/restful-java-client-with-apache-httpclient/
 
@@ -36,6 +36,7 @@ public class StationService {
         station.setName("Eldora");
         station.setElevation(9082);
         station.setWind(false);
+        station.setTriplet("test");
 
         String resp = objectMapper.writeValueAsString(station);
 
