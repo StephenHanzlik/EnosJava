@@ -11,13 +11,17 @@ import javax.ws.rs.core.Response;
 
 import java.util.List;
 
+
+//No longer using these.  May be helpful for cleaning up unnecessary configs
 //https://mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
 //https://mkyong.com/webservices/jax-rs/restful-java-client-with-apache-httpclient/
-@Path("/test")
+
+//https://www.baeldung.com/jackson-object-mapper-tutorial
+@Path("/station")
 public class StationService {
 
     @GET
-    @Path("/station")
+    @Path("/get")
     @Produces("application/json")
     public Station getStation(){
 
@@ -31,7 +35,7 @@ public class StationService {
 
     //We don't actually want to add stations unless importing the static list of station data
     @POST
-    @Path("/station")
+    @Path("/post")
     @Consumes("application/json")
     public Response createStation(Station station){
 
