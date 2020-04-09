@@ -22,23 +22,26 @@ import java.util.List;
 //Using These
 //https://www.baeldung.com/jackson-object-mapper-tutorial
 //http://tutorials.jenkov.com/java-json/jackson-objectmapper.html#write-json-from-objects
-@Path("/station")
+@Path("/snotel")
 public class StationService {
 
     @GET
-    @Path("/get")
+    @Path("/stations")
     @Produces("application/json")
-    public String getStation() throws JsonProcessingException {
+    public String getStation() throws JsonProcessingException{
 
+        //Test Resp
         ObjectMapper objectMapper = new ObjectMapper();
-
+//
         Station station = new Station();
         station.setName("Eldora");
         station.setElevation(9082);
         station.setWind(false);
         station.setTriplet("test");
-
+//
         String resp = objectMapper.writeValueAsString(station);
+
+        //We want to use HttpUtils here to make a request to SNOTEL
 
         return resp;
     }

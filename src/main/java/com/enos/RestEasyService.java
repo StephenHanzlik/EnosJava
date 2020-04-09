@@ -8,7 +8,7 @@ import javax.ws.rs.core.Application;
 
 //https://www.baeldung.com/resteasy-tutorial
 
-@ApplicationPath("/rest")
+@ApplicationPath("/api")
 public class RestEasyService extends Application {
 
     private Set<Object> singletons = new HashSet<Object>();
