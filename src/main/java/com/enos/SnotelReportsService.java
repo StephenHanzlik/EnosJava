@@ -4,8 +4,7 @@ package com.enos;
 //a service to build requests to pass to HttpUtil and to format data
 public class SnotelReportsService {
 
-    public static final String BASE_URL = "https://wcc.sc.egov.usda.gov/reportGenerator";
-    public static final String CSV_FORMAT = "/view_csv";
+    public static final String BASE_URL = "https://wcc.sc.egov.usda.gov/reportGenerator/view_csv";
     public static final String CUSTOM_SINGLE_STATION_REPORT= "/customSingleStationReport";
     public static final String CUSTOM_MULTI_TIME_SERIES_GROUP_BY_STATION_REPORT = "/customMultiTimeSeriesGroupByStationReport";
 
