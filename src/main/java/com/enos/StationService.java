@@ -12,6 +12,7 @@ import javax.ws.rs.core.Response;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
 import java.util.List;
 
 
@@ -28,22 +29,24 @@ public class StationService {
     @GET
     @Path("/stations")
     @Produces("application/json")
-    public String getStation() throws JsonProcessingException{
+    public String getStation() throws IOException {
 
         //Test Resp
-        ObjectMapper objectMapper = new ObjectMapper();
-//
-        Station station = new Station();
-        station.setName("Eldora");
-        station.setElevation(9082);
-        station.setWind(false);
-        station.setTriplet("test");
-//
-        String resp = objectMapper.writeValueAsString(station);
+//        ObjectMapper objectMapper = new ObjectMapper();
+////
+//        Station station = new Station();
+//        station.setName("Eldora");
+//        station.setElevation(9082);
+//        station.setWind(false);
+//        station.setTriplet("test");
+////
+//        String resp = objectMapper.writeValueAsString(station);
 
         //We want to use HttpUtils here to make a request to SNOTEL
+        HttpUtil httpUtil = new HttpUtil();
+        httpUtil.doGet();
 
-        return resp;
+        return "resp";
     }
 
     //We don't actually want to add stations unless importing the static list of station data
