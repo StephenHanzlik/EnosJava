@@ -8,14 +8,9 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.io.IOException;
 
-//@WebServlet(
-//        name = "stationservlet",
-//        urlPatterns = "/station-data"
-//)
 public class HttpUtil extends HttpServlet {
 
     public void doGet() throws IOException {

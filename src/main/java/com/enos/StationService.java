@@ -43,6 +43,7 @@ public class StationService {
 //        String resp = objectMapper.writeValueAsString(station);
 
         //We want to use HttpUtils here to make a request to SNOTEL
+        //Currently id does a dummy get
         HttpUtil httpUtil = new HttpUtil();
         httpUtil.doGet();
 
