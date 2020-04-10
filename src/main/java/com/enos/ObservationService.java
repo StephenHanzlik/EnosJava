@@ -12,6 +12,8 @@ import javax.ws.rs.core.Response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.util.*;
+
 
 
 @Path("/snotel")
@@ -34,6 +36,8 @@ public class ObservationService {
 
         HttpUtil httpUtil = new HttpUtil();
         String resp = httpUtil.doGet(requestUri);
+
+        Map convertedResponse = snotelReportsService.convertResponseToJSON(resp);
 
         return resp;
     }
