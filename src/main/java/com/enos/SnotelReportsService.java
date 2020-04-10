@@ -4,10 +4,7 @@ package com.enos;
 //a service to build requests to pass to HttpUtil and to format data
 public class SnotelReportsService {
 
-    public static final String BASE_URL = "https://wcc.sc.egov.usda.gov/reportGenerator/view_csv";
-    public static final String CUSTOM_SINGLE_STATION_REPORT= "/customSingleStationReport";
-    public static final String CUSTOM_MULTI_TIME_SERIES_GROUP_BY_STATION_REPORT = "/customMultiTimeSeriesGroupByStationReport";
-    public static final String DAILY = "/daily";
+    public static final String BASE_URL = "https://wcc.sc.egov.usda.gov/reportGenerator/view_csv/customSingleStationReport/daily";
     public static final String TRIPLET_ID_NAME_PREPEND= "%7Cid%3D%22%22%7Cname";
     public static final String SNOTEL_QUERY_FIELDS = "/WTEQ::value,WTEQ::delta,SNWD::value,SNWD::delta";
 
@@ -45,7 +42,7 @@ public class SnotelReportsService {
         stationTriplet = "/" + stationTriplet;
         dateRange = "/" + dateRange;
 
-        String requestUri = BASE_URL + CUSTOM_SINGLE_STATION_REPORT + DAILY + stationTriplet + TRIPLET_ID_NAME_PREPEND + dateRange + SNOTEL_QUERY_FIELDS;
+        String requestUri = BASE_URL + stationTriplet + TRIPLET_ID_NAME_PREPEND + dateRange + SNOTEL_QUERY_FIELDS;
 
         return requestUri;
     }
