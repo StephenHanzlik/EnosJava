@@ -22,19 +22,18 @@ public class ObservationService {
     @Produces("application/json")
     public String getObservation() throws IOException {
 
-        //Test Resp
-        ObjectMapper objectMapper = new ObjectMapper();
-//
-        Observation observation = new Observation();
-        observation.setDate("11/22/2020");
-        observation.setSnowWaterEquivalent("1 millions snows");
-//
-        String resp = objectMapper.writeValueAsString(observation);
+
 
         //We want to use HttpUtils here to make a request to SNOTEL
         //Currently id does a dummy get
-//        HttpUtil httpUtil = new HttpUtil();
-//        httpUtil.doGet();
+        SnotelReportsService snotelReportsService = new SnotelReportsService();
+        //335:CO:SNTL - Berthoud Pass
+        String stationTriplet = "335:CO:SNTL";
+        String dateRange = "2013-01-15,2013-01-18";
+        String requestUri = snotelReportsService.buildSnotelReportUrl(stationTriplet, dateRange);
+
+        HttpUtil httpUtil = new HttpUtil();
+        String resp = httpUtil.doGet(requestUri);
 
         return resp;
     }

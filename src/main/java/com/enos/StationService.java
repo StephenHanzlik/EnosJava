@@ -43,10 +43,16 @@ public class StationService {
 ////
 //        String resp = objectMapper.writeValueAsString(station);
 
-        //We want to use HttpUtils here to make a request to SNOTEL
-        //Currently id does a dummy get
-        HttpUtil httpUtil = new HttpUtil();
-        httpUtil.doGet();
+//        //We want to use HttpUtils here to make a request to SNOTEL
+//        //Currently id does a dummy get
+//        SnotelReportsService snotelReportsService = new SnotelReportsService();
+//        //335:CO:SNTL - Berthoud Pass
+//        String stationTriplet = "335:CO:SNTL";
+//        String dateRange = "2013-01-15,2013-01-18";
+//        snotelReportsService.buildSnotelReportUrl(stationTriplet, dateRange);
+//
+//        HttpUtil httpUtil = new HttpUtil();
+//        httpUtil.doGet();
 
         return "resp";
     }

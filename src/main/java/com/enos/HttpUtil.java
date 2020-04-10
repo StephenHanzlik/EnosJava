@@ -13,13 +13,14 @@ import java.io.IOException;
 
 public class HttpUtil extends HttpServlet {
 
-    public String doGet() throws IOException {
+    public String doGet(String requestUri) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
         try {
 //          https://httpbin.org/get
+//          "http://wcc.sc.egov.usda.gov/reportGenerator/view_csv/customSingleStationReport/daily/335:CO:SNTL%7Cid%3D%22%22%7Cname/2013-01-15,2013-01-18/WTEQ%3A%3Avalue%2CWTEQ%3A%3Adelta%2CSNWD%3A%3Avalue%2CSNWD%3A%3Adelta"
 
-            HttpGet request = new HttpGet("http://wcc.sc.egov.usda.gov/reportGenerator/view_csv/customSingleStationReport/daily/335:CO:SNTL%7Cid%3D%22%22%7Cname/2013-01-15,2013-01-18/WTEQ%3A%3Avalue%2CWTEQ%3A%3Adelta%2CSNWD%3A%3Avalue%2CSNWD%3A%3Adelta");
+            HttpGet request = new HttpGet(requestUri);
 
             // add request headers
 //            request.addHeader("custom-key", "mkyong");
