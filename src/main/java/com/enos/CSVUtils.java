@@ -1,28 +1,42 @@
 package com.enos;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
 public class CSVUtils {
 
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
 
-    public static void main(String file) throws Exception, IOException {
+//    public static void main(String file) throws Exception, IOException {
+public static String convertToJSON(String file){
 
-        Scanner scanner = new Scanner(file);
-        while (scanner.hasNext()) {
-            List<String> line = parseLine(scanner.nextLine());
-            System.out.println("Read line:");
-            System.out.println(line);
-            System.out.println("***End***");
-        }
-        scanner.close();
-
+    Scanner scanner = new Scanner(file);
+    while (scanner.hasNext()) {
+        List<String> line = parseLine(scanner.nextLine());
+//        System.out.println("Read line:");
+        System.out.println(line);
+//        System.out.println("***End***");
     }
+    scanner.close();
+//    JSONArray arr = new JSONArray();
+//    JSONObject obj;
+//    for( int i = 0; i < yourUserArr.length; i++ ){
+//        obj = new JSONObject();
+//        obj.put("user", yourUserArr[i]);
+//        obj.put("password", yourPassArr[i]);
+//        arr.put( obj );
+//    }
+//    String data = arr.toString();
+
+    return "a string";
+
+
+}
+//    }
 
     public static List<String> parseLine(String cvsLine) {
         return parseLine(cvsLine, DEFAULT_SEPARATOR, DEFAULT_QUOTE);

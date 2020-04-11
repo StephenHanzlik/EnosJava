@@ -37,14 +37,14 @@ public class ObservationService {
         HttpUtil httpUtil = new HttpUtil();
         String resp = httpUtil.doGet(requestUri);
 
-//        Map convertedResponse = snotelReportsService.convertResponseToJSON(resp);
-
-        CSVUtils csvUtils = new CSVUtils();
         try {
-            csvUtils.main(resp);
+
+            CSVUtils csvUtils = new CSVUtils();
+            resp = csvUtils.convertToJSON(resp);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return resp;
     }
 
