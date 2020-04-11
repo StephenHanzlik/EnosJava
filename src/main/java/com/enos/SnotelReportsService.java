@@ -1,6 +1,8 @@
 package com.enos;
 
 import java.util.*;
+import java.util.Scanner;
+
 
 //a service to build requests to pass to HttpUtil and to format data
 public class SnotelReportsService {
@@ -49,22 +51,22 @@ public class SnotelReportsService {
     }
 
 //    https://stackoverflow.com/questions/50651713/convert-a-comma-separated-string-to-json-in-java
-    public Map convertResponseToJSON(String snotelReport) {
+//    public Map convertResponseToJSON(String snotelReport) {
         //This doesn't quite do what we want
-        String [] arrayStr = snotelReport.split(",");
-        Map<String,String> map = new HashMap<>();
+//        String [] arrayStr = snotelReport.split(",");
+//        Map<String,String> map = new HashMap<>();
+//
+//        String key = null;
+//        for (String s: arrayStr){
+//            if(key == null) {
+//                key = s;
+//            } else {
+//                map.put(key, s);
+//                key = null;
+//            }
+//        }
 
-        String key = null;
-        for (String s: arrayStr){
-            if(key == null) {
-                key = s;
-            } else {
-                map.put(key, s);
-                key = null;
-            }
-        }
-        //will need to use something like Jackson to convert this map
-        return map;
-    }
+
+//    }
 
 }
