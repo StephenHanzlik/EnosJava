@@ -1,5 +1,7 @@
 package com.enos;
 
+import com.enos.model.Observation;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,30 +14,42 @@ public class CSVUtils {
     private static final char DEFAULT_QUOTE = '"';
 
 //    public static void main(String file) throws Exception, IOException {
-public static String convertToJSON(String file){
+    public static String convertToJSON(String file){
 
     Scanner scanner = new Scanner(file);
+
     while (scanner.hasNext()) {
         List<String> line = parseLine(scanner.nextLine());
-//        System.out.println("Read line:");
-        System.out.println(line);
-//        System.out.println("***End***");
+
+        String firstItem = line.get(0);
+        if(firstItem.indexOf("#") == -1 && firstItem.indexOf("Date") == -1){
+            Observation observation = new Observation();
+            observation.setDate(line.get(0));
+            observation.setSnowWaterEquivalent(line.get(1));
+            observation.setChangeInSnowWaterEquivalent(line.get(2));
+            observation.setSnowDepth(line.get(3));
+            observation.setChangeInSnowDepth(line.get(4));
+            //We want to add air temp observed
+
+        }
+
     }
     scanner.close();
-//    JSONArray arr = new JSONArray();
-//    JSONObject obj;
-//    for( int i = 0; i < yourUserArr.length; i++ ){
-//        obj = new JSONObject();
-//        obj.put("user", yourUserArr[i]);
-//        obj.put("password", yourPassArr[i]);
-//        arr.put( obj );
-//    }
-//    String data = arr.toString();
 
     return "a string";
+    }
 
-
-}
+//    private static String convertToJSON(Observation observation){
+    //        JSONArray arr = new JSONArray();
+    //        JSONObject obj;
+    //        for( int i = 0; i < yourUserArr.length; i++ ){
+    //            obj = new JSONObject();
+    //            obj.put("user", yourUserArr[i]);
+    //            obj.put("password", yourPassArr[i]);
+    //            arr.put( obj );
+    //        }
+    //        String data = arr.toString();
+    //        return data;
 //    }
 
     public static List<String> parseLine(String cvsLine) {
