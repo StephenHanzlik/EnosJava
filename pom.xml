@@ -39,6 +39,7 @@
 
     <properties>
         <resteasy.version>3.0.14.Final</resteasy.version>
+        <jackson.version>2.10.0</jackson.version>
     </properties>
 
 
@@ -60,6 +61,12 @@
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
         </dependency>
 
 

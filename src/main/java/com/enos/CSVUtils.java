@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 //https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
 public class CSVUtils {
 
@@ -14,7 +17,7 @@ public class CSVUtils {
     private static final char DEFAULT_QUOTE = '"';
 
 //    public static void main(String file) throws Exception, IOException {
-    public static String convertToJSON(String file){
+    public static String convertToJSON(String file) throws JsonProcessingException {
 
     Scanner scanner = new Scanner(file);
 
@@ -29,28 +32,20 @@ public class CSVUtils {
             observation.setChangeInSnowWaterEquivalent(line.get(2));
             observation.setSnowDepth(line.get(3));
             observation.setChangeInSnowDepth(line.get(4));
-            //We want to add air temp observed
+            //We want to add air temp observe
 
+            ObjectMapper mapper = new ObjectMapper(); // create once, reuse
+            String jsonString = mapper.writeValueAsString(observation);
+
+            return jsonString;
         }
-
     }
     scanner.close();
 
-    return "a string";
+    //Throw an exception
+    return "No Data Found";
     }
 
-//    private static String convertToJSON(Observation observation){
-    //        JSONArray arr = new JSONArray();
-    //        JSONObject obj;
-    //        for( int i = 0; i < yourUserArr.length; i++ ){
-    //            obj = new JSONObject();
-    //            obj.put("user", yourUserArr[i]);
-    //            obj.put("password", yourPassArr[i]);
-    //            arr.put( obj );
-    //        }
-    //        String data = arr.toString();
-    //        return data;
-//    }
 
     public static List<String> parseLine(String cvsLine) {
         return parseLine(cvsLine, DEFAULT_SEPARATOR, DEFAULT_QUOTE);
