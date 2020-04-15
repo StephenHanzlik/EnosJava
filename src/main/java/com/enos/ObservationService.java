@@ -32,7 +32,7 @@ public class ObservationService {
         //335:CO:SNTL - Berthoud Pass
         String stationTriplet = "335:CO:SNTL";
         String dateRange = "2013-01-15,2013-01-18";
-        String requestUri = snotelReportsService.buildSnotelReportUrl(stationTriplet, dateRange);
+        String requestUri = snotelReportsService.buildObservationUrl(stationTriplet, dateRange);
 
         HttpUtil httpUtil = new HttpUtil();
         String resp = httpUtil.doGet(requestUri);

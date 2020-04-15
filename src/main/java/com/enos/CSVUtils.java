@@ -41,7 +41,6 @@ public class CSVUtils {
         }
     }
     scanner.close();
-
     //Throw an exception
     return "No Data Found";
     }

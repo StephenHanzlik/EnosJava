@@ -40,7 +40,7 @@ public class SnotelReportsService {
 
 
 
-    public String buildSnotelReportUrl(String stationTriplet, String dateRange){
+    public String buildObservationUrl(String stationTriplet, String dateRange){
 
         stationTriplet = "/" + stationTriplet;
         dateRange = "/" + dateRange;
@@ -49,6 +49,20 @@ public class SnotelReportsService {
 
         return requestUri;
     }
+
+//    public String buildStationUrl(String stationTriplet, String dateRange){
+//
+//        stationTriplet = "/" + stationTriplet;
+//        dateRange = "/" + dateRange;
+//
+//        String requestUri = BASE_URL + stationTriplet + TRIPLET_ID_NAME_PREPEND + dateRange + SNOTEL_QUERY_FIELDS;
+//
+//        return requestUri;
+//    }
+
+
+
+
 
 //    https://stackoverflow.com/questions/50651713/convert-a-comma-separated-string-to-json-in-java
 //    public Map convertResponseToJSON(String snotelReport) {
