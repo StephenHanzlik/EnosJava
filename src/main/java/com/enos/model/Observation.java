@@ -37,7 +37,7 @@ public class Observation {
 
     public String getSnowWaterEquivalent() { return snow_water_equivalent; }
 
-    public  String getChangeInSnowWaterEquivalent(){ return change_in_snow_water_equivalent; }
+    public String getChangeInSnowWaterEquivalent(){ return change_in_snow_water_equivalent; }
 
     public String getSnowDepth() { return snow_depth_in; }
 
@@ -45,11 +45,36 @@ public class Observation {
 
     public String getAirTemperatureObserved() { return air_temperature_observed_degf; }
 
-//     Date: String,
-//     Snow_Water_Equivalent_in: String,
-//     Change_In_Snow_Water_Equivalent_in: String,
-//     Snow_Depth_in: String,
-//     Change_In_Snow_Depth_in: String,
-//     Air_Temperature_Observed_degF: String
+
+//DB Set up Local
+//$ psqlenos
+    //create databasse enos;
+    //create user enos;
+    //grant all privileges on database enos to enos;
+    //
+
+//    https://www.postgresql.org/docs/9.1/sql-createtable.html
+//    https://www.postgresqltutorial.com/postgresql-data-types/
+//CREATE TABLE stations (
+//    elevation   smallint,
+//    location    varchar(40),
+//    name        varchar(40,
+//    timezone    smallint,
+//    triplet     varchar(10),
+//    wind        boolean
+//);
+
+//Stations JSON - https://github.com/StephenHanzlik/Enos_Node_Impl/blob/master/stations.json
+//    {
+//        "elevation": 8777,
+//            "location": {
+//        "lat": 40.8852,
+//                "lng": -110.8277
+//    },
+//        "name": "BEAR RIVER RS",
+//            "timezone": -7,
+//            "triplet": "992:UT:SNTL",
+//            "wind": false
+//    }
 
 }

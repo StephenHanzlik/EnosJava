@@ -31,33 +31,12 @@ public class StationService {
     @Produces("application/json")
     public String getStation() throws IOException {
 
-        //https://wcc.sc.egov.usda.gov/reportGenerator/
-        //Test Resp
-//        ObjectMapper objectMapper = new ObjectMapper();
-////
-//        Station station = new Station();
-//        station.setName("Eldora");
-//        station.setElevation(9082);
-//        station.setWind(false);
-//        station.setTriplet("test");
-////
-//        String resp = objectMapper.writeValueAsString(station);
-
-//        //We want to use HttpUtils here to make a request to SNOTEL
-//        //Currently id does a dummy get
-//        SnotelReportsService snotelReportsService = new SnotelReportsService();
-//        //335:CO:SNTL - Berthoud Pass
-//        String stationTriplet = "335:CO:SNTL";
-//        String dateRange = "2013-01-15,2013-01-18";
-//        snotelReportsService.buildSnotelReportUrl(stationTriplet, dateRange);
-//
-//        HttpUtil httpUtil = new HttpUtil();
-//        httpUtil.doGet();
+    //This will be a look up in the DB
 
         return "resp";
     }
 
-    //We don't actually want to add stations unless importing the static list of station data
+    //Used for importing static list of station json
     @POST
     @Path("/post")
     @Consumes("application/json")

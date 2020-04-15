@@ -31,7 +31,7 @@ public class ObservationService {
         SnotelReportsService snotelReportsService = new SnotelReportsService();
         //335:CO:SNTL - Berthoud Pass
         String stationTriplet = "335:CO:SNTL";
-        String dateRange = "2013-01-15,2013-01-18";
+        String dateRange = "2020-04-13,2020-04-14";
         String requestUri = snotelReportsService.buildObservationUrl(stationTriplet, dateRange);
 
         HttpUtil httpUtil = new HttpUtil();
@@ -48,14 +48,14 @@ public class ObservationService {
         return resp;
     }
 
-    @POST
-    @Path("/observations")
-    @Consumes("application/json")
-    public Response createStation(Observation observation){
-
-        String result = "Station created: " + observation;
-        return Response.status(201).entity(result).build();
-    }
+//    @POST
+//    @Path("/observations")
+//    @Consumes("application/json")
+//    public Response createObservation(Observation observation){
+//
+//        String result = "Station created: " + observation;
+//        return Response.status(201).entity(result).build();
+//    }
 
 
 }

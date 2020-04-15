@@ -10,13 +10,13 @@ import java.util.Scanner;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+// https://github.com/FasterXML/jackson-databind/
 //https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
 public class CSVUtils {
 
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
 
-//    public static void main(String file) throws Exception, IOException {
     public static String convertToJSON(String file) throws JsonProcessingException {
 
     Scanner scanner = new Scanner(file);
