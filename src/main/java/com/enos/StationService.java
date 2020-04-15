@@ -32,6 +32,11 @@ public class StationService {
     public String getStation() throws IOException {
 
     //This will be a look up in the DB
+        System.out.println("Calling GET /stations");
+        PsqlService psqlService = new PsqlService();
+        psqlService.connectToDb();
+        System.out.println("did main run above?");
+
 
         return "resp";
     }

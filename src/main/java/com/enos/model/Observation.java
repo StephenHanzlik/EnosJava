@@ -56,25 +56,27 @@ public class Observation {
 //    https://www.postgresql.org/docs/9.1/sql-createtable.html
 //    https://www.postgresqltutorial.com/postgresql-data-types/
 //CREATE TABLE stations (
-//    elevation   smallint,
-//    location    varchar(40),
-//    name        varchar(40,
+//            elevation   smallint,
+//            location    varchar(100),
+//    name        varchar(60),
 //    timezone    smallint,
-//    triplet     varchar(10),
+//    triplet     varchar(20),
 //    wind        boolean
 //);
 
 //Stations JSON - https://github.com/StephenHanzlik/Enos_Node_Impl/blob/master/stations.json
 //    {
 //        "elevation": 8777,
-//            "location": {
-//        "lat": 40.8852,
-//                "lng": -110.8277
-//    },
+//        "location": {
+//           "lat": 40.8852,
+//           "lng": -110.8277
+//        },
 //        "name": "BEAR RIVER RS",
-//            "timezone": -7,
-//            "triplet": "992:UT:SNTL",
-//            "wind": false
+//        "timezone": -7,
+//        "triplet": "992:UT:SNTL",
+//        "wind": false
 //    }
+
+//    insert into stations('elevation', 'location', 'name', 'timezone', 'triplet', 'wind') values(8777, '{"lat":40.8852,"lng":-110.8277}', 'BEAR RIVER RS', -7, '992:UT:SNTL', false);
 
 }
