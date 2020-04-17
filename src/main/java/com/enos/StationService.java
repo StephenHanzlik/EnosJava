@@ -15,7 +15,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
 
-
 //No longer using these.  May be helpful for cleaning up unnecessary dependencies
 //https://mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
 //https://mkyong.com/webservices/jax-rs/restful-java-client-with-apache-httpclient/
@@ -29,14 +28,13 @@ public class StationService {
     @GET
     @Path("/stations")
     @Produces("application/json")
-    public String getStation() throws IOException {
+    public String getStation() throws IOException, ClassNotFoundException {
 
     //This will be a look up in the DB
         System.out.println("Calling GET /stations");
         PsqlService psqlService = new PsqlService();
-        psqlService.connectToDb();
+        psqlService.connect();
         System.out.println("did main run above?");
-
 
         return "resp";
     }
