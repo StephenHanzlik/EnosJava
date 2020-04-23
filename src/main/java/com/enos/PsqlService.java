@@ -1,5 +1,7 @@
 package com.enos;
 
+import com.enos.model.Station;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -9,10 +11,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import java.lang.ClassNotFoundException;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.sql.ResultSetMetaData;
+
+import com.google.gson.*;
 
 
 public class PsqlService {
-//    public static void main(String[] args) {
+//    should split up connect and retrieve stations
     public String connect() throws ClassNotFoundException{
         String url = "jdbc:postgresql://localhost:5432/enos";
         String user = "enos";
@@ -25,7 +33,10 @@ public class PsqlService {
             ResultSet rs = st.executeQuery("SELECT * from stations;");
 
             if (rs.next()) {
-                System.out.println(rs.getString(1));
+                List list = resultSetToArrayList(rs);
+                String jsonString = arrayListToJSON(list);
+
+                return jsonString;
             }
 
         } catch (SQLException ex) {
@@ -33,54 +44,30 @@ public class PsqlService {
             Logger lgr = Logger.getLogger(PsqlService.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
-        return "a string";
+        //we really want to throw and exception
+        return "no station found exception";
     }
 
 //    }
+    public List resultSetToArrayList(ResultSet rs) throws SQLException{
+        ResultSetMetaData md = rs.getMetaData();
+        int columns = md.getColumnCount();
+        ArrayList list = new ArrayList(50);
+        while (rs.next()){
+            HashMap row = new HashMap(columns);
+            for(int i=1; i<=columns; ++i){
+                row.put(md.getColumnName(i),rs.getObject(i));
+            }
+            list.add(row);
+        }
+
+        return list;
+    }
+
+    public String arrayListToJSON(List mylist) {
+        Gson gson = new Gson();
+        String jsonArray = gson.toJson(mylist);
+        return jsonArray;
+    }
 
 }
-
-//package com.enos;
-//
-//import java.sql.Connection;
-//import java.sql.DriverManager;
-//import java.sql.SQLException;
-//
-//import java.lang.ClassNotFoundException;
-//
-///**
-// *
-// * @author postgresqltutorial.com
-// */
-//public class PsqlService {
-//
-//    private final String url = "jdbc:postgresql://localhost:5432/enos";
-//    private final String user = "enos";
-//    private final String password = "enos";
-//
-//    /**
-//     * Connect to the PostgreSQL database
-//     *
-//     * @return a Connection object
-//     */
-//    public Connection connect() throws ClassNotFoundException {
-//        Connection conn = null;
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//            conn = DriverManager.getConnection(url, user, password);
-//            System.out.println("Connected to the PostgreSQL server successfully.");
-//        } catch (SQLException e) {
-//            System.out.println(e.getMessage());
-//        }
-//
-//        return conn;
-//    }
-//
-//    /**
-//     * @param args the command line arguments
-//     */
-//    public static void main(String[] args) throws ClassNotFoundException {
-//        PsqlService psqlService = new PsqlService();
-//        psqlService.connect();
-//    }
-//}

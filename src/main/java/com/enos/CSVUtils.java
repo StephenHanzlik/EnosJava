@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 
 // https://github.com/FasterXML/jackson-databind/
 //https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
@@ -17,9 +18,11 @@ public class CSVUtils {
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
 
-    public static String convertToJSON(String file) throws JsonProcessingException {
+    public static ArrayList convertCSVToJSON(String file) throws JsonProcessingException {
 
     Scanner scanner = new Scanner(file);
+
+    ArrayList stationsJson = new ArrayList(500); // May want to increase this if pulling 5+ years of data
 
     while (scanner.hasNext()) {
         List<String> line = parseLine(scanner.nextLine());
@@ -35,16 +38,23 @@ public class CSVUtils {
             //We want to add air temp observe
 
             ObjectMapper mapper = new ObjectMapper(); // create once, reuse
-            String jsonString = mapper.writeValueAsString(observation);
+            String stationJson = mapper.writeValueAsString(observation);
+            stationsJson.add(stationJson);
 
-            return jsonString;
+            return stationsJson;
         }
     }
     scanner.close();
-    //Throw an exception
-    return "No Data Found";
+
+    //exception handling
+    return stationsJson;
     }
 
+    public String arrayListToJSON(List mylist) {
+        Gson gson = new Gson();
+        String jsonArray = gson.toJson(mylist);
+        return jsonArray;
+    }
 
     public static List<String> parseLine(String cvsLine) {
         return parseLine(cvsLine, DEFAULT_SEPARATOR, DEFAULT_QUOTE);

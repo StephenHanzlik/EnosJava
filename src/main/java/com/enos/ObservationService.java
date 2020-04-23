@@ -24,8 +24,6 @@ public class ObservationService {
     @Produces("application/json")
     public String getObservation() throws IOException {
 
-
-
         //We want to use HttpUtils here to make a request to SNOTEL
         //Currently id does a dummy get
         SnotelReportsService snotelReportsService = new SnotelReportsService();
@@ -37,15 +35,17 @@ public class ObservationService {
         HttpUtil httpUtil = new HttpUtil();
         String resp = httpUtil.doGet(requestUri);
 
+        String observations = "No observations found";
+
         try {
 
             CSVUtils csvUtils = new CSVUtils();
-            resp = csvUtils.convertToJSON(resp);
+            observations = csvUtils.arrayListToJSON(csvUtils.convertCSVToJSON(resp));
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return resp;
+        return observations;
     }
 
 //    @POST

@@ -5,8 +5,7 @@ public class Station {
 //    codejava.net/coding/java-getter-and-setter-tutorial-from-basics-to-best-practices
     private int sid;
     private int elevation;
-    private int latitude;
-    private int longitude;
+    private String location;
     private String name;
     private int timezone;
     private String triplet;
@@ -27,6 +26,8 @@ public class Station {
     public int getElevation() {
         return elevation;
     }
+
+    public void setLocation(String location) { this.location = location; }
 
     public void setWind(boolean wind) {
         this.wind = wind;

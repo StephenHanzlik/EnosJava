@@ -33,10 +33,10 @@ public class StationService {
     //This will be a look up in the DB
         System.out.println("Calling GET /stations");
         PsqlService psqlService = new PsqlService();
-        psqlService.connect();
+        String stationsJson = psqlService.connect();
         System.out.println("did main run above?");
 
-        return "resp";
+        return stationsJson;
     }
 
     //Used for importing static list of station json
