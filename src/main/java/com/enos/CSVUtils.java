@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,7 +19,7 @@ public class CSVUtils {
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
 
-    public static ArrayList convertCSVToJSON(String file) throws JsonProcessingException {
+    public static Map convertCSVToJSON(String file) throws JsonProcessingException {
 
     Scanner scanner = new Scanner(file);
 
@@ -38,16 +39,18 @@ public class CSVUtils {
             //We want to add air temp observe
 
             ObjectMapper mapper = new ObjectMapper(); // create once, reuse
-            String stationJson = mapper.writeValueAsString(observation);
-            stationsJson.add(stationJson);
+            Map<String, Object> observationMap = mapper.convertValue(observation, Map.class);
 
-            return stationsJson;
+            return observationMap;
         }
     }
     scanner.close();
 
     //exception handling
-    return stationsJson;
+        ObjectMapper mapper = new ObjectMapper(); // create once, reuse
+        Observation observation = new Observation();
+        Map<String, Object> observationMap = mapper.convertValue(observation, Map.class);
+        return  observationMap;
     }
 
     public String arrayListToJSON(List mylist) {

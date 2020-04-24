@@ -40,7 +40,10 @@ public class ObservationService {
         try {
 
             CSVUtils csvUtils = new CSVUtils();
-            observations = csvUtils.arrayListToJSON(csvUtils.convertCSVToJSON(resp));
+            Map parsedCSV = csvUtils.convertCSVToJSON(resp);
+            ArrayList arrayList = new ArrayList(10);
+            arrayList.add(parsedCSV);
+            observations = csvUtils.arrayListToJSON(arrayList);
         } catch (Exception e) {
             e.printStackTrace();
         }
