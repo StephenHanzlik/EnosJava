@@ -1,18 +1,16 @@
 package com.enos;
 
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.PathParam;
-import javax.ws.rs.core.Response;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
+import javax.ws.rs.QueryParam;
 
 import java.io.IOException;
 import java.util.*;
 
-
+//335:CO:SNTL - Berthoud Pass
+//https://mkyong.com/webservices/jax-rs/jax-rs-queryparam-example/?utm_source=mkyong.com&utm_medium=referral&utm_campaign=afterpost-related&utm_content=link1
 
 @Path("/snotel")
 public class ObservationService {
@@ -20,14 +18,19 @@ public class ObservationService {
     @GET
     @Path("/observations/{stationTriplet}")
     @Produces("application/json")
-    public String getObservation(@PathParam("stationTriplet") String stationTriplet) throws IOException {
+    public String getObservation(
+            @PathParam("stationTriplet")
+                    String stationTriplet,
+            @QueryParam("from")
+                    String from,
+            @QueryParam("to")
+                    String to
+            ) throws IOException {
 
-        //We want to use HttpUtils here to make a request to SNOTEL
-        //Currently id does a dummy get
+
         SnotelReportsService snotelReportsService = new SnotelReportsService();
-        //335:CO:SNTL - Berthoud Pass
-//         stationTriplet = "335:CO:SNTL";
-        String dateRange = "2020-04-13,2020-04-14";
+//        String dateRange = "2020-04-13,2020-04-14";
+        String dateRange = from + "," + to;
         String requestUri = snotelReportsService.buildObservationUrl(stationTriplet, dateRange);
 
         HttpUtil httpUtil = new HttpUtil();
@@ -48,15 +51,5 @@ public class ObservationService {
 
         return observations;
     }
-
-//    @POST
-//    @Path("/observations")
-//    @Consumes("application/json")
-//    public Response createObservation(Observation observation){
-//
-//        String result = "Station created: " + observation;
-//        return Response.status(201).entity(result).build();
-//    }
-
 
 }

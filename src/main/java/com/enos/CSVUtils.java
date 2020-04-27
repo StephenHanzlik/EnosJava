@@ -36,6 +36,9 @@ public class CSVUtils {
             observation.setChangeInSnowWaterEquivalent(line.get(2));
             observation.setSnowDepth(line.get(3));
             observation.setChangeInSnowDepth(line.get(4));
+            observation.setAirTemperatureAverage(line.get(5));
+            observation.setAirTemperatureMin(line.get(6));
+            observation.setAirTemperatureMax(line.get(7));
             //We want to add air temp observe
 
             ObjectMapper mapper = new ObjectMapper(); // create once, reuse

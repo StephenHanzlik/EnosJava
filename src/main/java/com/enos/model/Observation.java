@@ -7,7 +7,9 @@ public class Observation {
     private String change_in_snow_water_equivalent;
     private String snow_depth_in;
     private String change_in_snow_depth_in;
-    private String air_temperature_observed_degf;
+    private String air_temperature_average_degf;
+    private String air_temperature_min_degf;
+    private String air_temperature_max_degf;
 
     public void setDate(String date) {
         this.date = date;
@@ -29,8 +31,16 @@ public class Observation {
         this.change_in_snow_depth_in = change_in_snow_depth_in;
     }
 
-    public void setAirTemperatureObserved(String air_temperature_observed_degf){
-        this.air_temperature_observed_degf = air_temperature_observed_degf;
+    public void setAirTemperatureAverage(String air_temperature_average_degf){
+        this.air_temperature_average_degf = air_temperature_average_degf;
+    }
+
+    public void setAirTemperatureMin(String air_temperature_min_degf){
+        this.air_temperature_min_degf = air_temperature_min_degf;
+    }
+
+    public void setAirTemperatureMax(String air_temperature_max_degf){
+        this.air_temperature_max_degf = air_temperature_max_degf;
     }
 
     public String getDate() { return date; }
@@ -43,8 +53,11 @@ public class Observation {
 
     public String getChangeInSnowDepth() { return change_in_snow_depth_in; }
 
-    public String getAirTemperatureObserved() { return air_temperature_observed_degf; }
+    public String getAirTemperatureAverage() { return air_temperature_average_degf; }
 
+    public String getAirTemperatureMin() { return air_temperature_min_degf; }
+
+    public String getAirTemperatureMax() { return air_temperature_max_degf; }
 
 //DB Set up Local
 //$ psqlenos
