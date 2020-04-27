@@ -1,12 +1,10 @@
 package com.enos;
 
-import com.enos.model.Observation;
-
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,15 +18,15 @@ import java.util.*;
 public class ObservationService {
 
     @GET
-    @Path("/observations")
+    @Path("/observations/{stationTriplet}")
     @Produces("application/json")
-    public String getObservation() throws IOException {
+    public String getObservation(@PathParam("stationTriplet") String stationTriplet) throws IOException {
 
         //We want to use HttpUtils here to make a request to SNOTEL
         //Currently id does a dummy get
         SnotelReportsService snotelReportsService = new SnotelReportsService();
         //335:CO:SNTL - Berthoud Pass
-        String stationTriplet = "335:CO:SNTL";
+//         stationTriplet = "335:CO:SNTL";
         String dateRange = "2020-04-13,2020-04-14";
         String requestUri = snotelReportsService.buildObservationUrl(stationTriplet, dateRange);
 
