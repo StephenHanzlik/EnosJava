@@ -10,6 +10,7 @@ public class Observation {
     private String air_temperature_average_degf;
     private String air_temperature_min_degf;
     private String air_temperature_max_degf;
+    private String air_temperature_observed;
 
     public void setDate(String date) {
         this.date = date;
@@ -43,6 +44,10 @@ public class Observation {
         this.air_temperature_max_degf = air_temperature_max_degf;
     }
 
+    public void setAirTemperatureObserved(String air_temperature_observed){
+        this.air_temperature_observed = air_temperature_observed;
+    }
+
     public String getDate() { return date; }
 
     public String getSnowWaterEquivalent() { return snow_water_equivalent; }
@@ -58,6 +63,8 @@ public class Observation {
     public String getAirTemperatureMin() { return air_temperature_min_degf; }
 
     public String getAirTemperatureMax() { return air_temperature_max_degf; }
+
+    public String getAirTemperatureObserved() { return air_temperature_observed; }
 
 //DB Set up Local
 //$ psqlenos

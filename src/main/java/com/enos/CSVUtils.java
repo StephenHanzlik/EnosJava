@@ -39,6 +39,7 @@ public class CSVUtils {
             observation.setAirTemperatureAverage(line.get(5));
             observation.setAirTemperatureMin(line.get(6));
             observation.setAirTemperatureMax(line.get(7));
+            observation.setAirTemperatureObserved(line.get(8));
 
             //This needs to loop through each line and create objects of each line
 
