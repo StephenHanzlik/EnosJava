@@ -29,7 +29,6 @@ public class ObservationService {
 
 
         SnotelReportsService snotelReportsService = new SnotelReportsService();
-//        String dateRange = "2020-04-13,2020-04-14";
         String dateRange = from + "," + to;
         String requestUri = snotelReportsService.buildObservationUrl(stationTriplet, dateRange);
 
@@ -41,10 +40,9 @@ public class ObservationService {
         try {
 
             CSVUtils csvUtils = new CSVUtils();
-            Map parsedCSV = csvUtils.convertCSVToJSON(resp);
-            ArrayList arrayList = new ArrayList(10);
-            arrayList.add(parsedCSV);
-            observations = csvUtils.arrayListToJSON(arrayList);
+            ArrayList observationsArrayList = csvUtils.convertCSVToJSON(resp);
+            observations = csvUtils.arrayListToJSON(observationsArrayList);
+            return observations;
         } catch (Exception e) {
             e.printStackTrace();
         }

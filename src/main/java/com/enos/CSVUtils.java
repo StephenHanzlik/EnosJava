@@ -19,11 +19,11 @@ public class CSVUtils {
     private static final char DEFAULT_SEPARATOR = ',';
     private static final char DEFAULT_QUOTE = '"';
 
-    public static Map convertCSVToJSON(String file) throws JsonProcessingException {
+    public static ArrayList convertCSVToJSON(String file) throws JsonProcessingException {
 
     Scanner scanner = new Scanner(file);
 
-    ArrayList stationsJson = new ArrayList(500); // May want to increase this if pulling 5+ years of data
+    ArrayList observationsJson = new ArrayList(500); // May want to increase this if pulling 5+ years of data
 
     while (scanner.hasNext()) {
         List<String> line = parseLine(scanner.nextLine());
@@ -39,21 +39,17 @@ public class CSVUtils {
             observation.setAirTemperatureAverage(line.get(5));
             observation.setAirTemperatureMin(line.get(6));
             observation.setAirTemperatureMax(line.get(7));
-            //We want to add air temp observe
+
+            //This needs to loop through each line and create objects of each line
 
             ObjectMapper mapper = new ObjectMapper(); // create once, reuse
             Map<String, Object> observationMap = mapper.convertValue(observation, Map.class);
 
-            return observationMap;
+            observationsJson.add(observationMap);
         }
     }
     scanner.close();
-
-    //exception handling
-        ObjectMapper mapper = new ObjectMapper(); // create once, reuse
-        Observation observation = new Observation();
-        Map<String, Object> observationMap = mapper.convertValue(observation, Map.class);
-        return  observationMap;
+    return observationsJson;
     }
 
     public String arrayListToJSON(List mylist) {

@@ -9,7 +9,7 @@ public class SnotelReportsService {
 
     public static final String BASE_URL = "https://wcc.sc.egov.usda.gov/reportGenerator/view_csv/customSingleStationReport/daily";
     public static final String TRIPLET_ID_NAME_PREPEND= "%7Cid%3D%22%22%7Cname";
-    public static final String SNOTEL_QUERY_FIELDS = "/WTEQ::value,WTEQ::delta,SNWD::value,SNWD::delta,TAVG::value,TMIN::value,TMAX::value";
+    public static final String SNOTEL_QUERY_FIELDS = "/WTEQ::value,WTEQ::delta,SNWD::value,SNWD::delta,TAVG::value,TMIN::value,TMAX::value,TOBS::value";
 
 
 //**********************************************************************************
