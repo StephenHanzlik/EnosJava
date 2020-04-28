@@ -32,12 +32,10 @@ public class PsqlService {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("SELECT * from stations;");
 
-            if (rs.next()) {
-                List list = resultSetToArrayList(rs);
-                String jsonString = arrayListToJSON(list);
+            List list = resultSetToArrayList(rs);
+            String jsonString = arrayListToJSON(list);
 
-                return jsonString;
-            }
+            return jsonString;
 
         } catch (SQLException ex) {
 
