@@ -28,7 +28,7 @@ public class StationService {
     @GET
     @Path("/stations")
     @Produces("application/json")
-    public String getStation() throws IOException, ClassNotFoundException {
+    public String getStation() throws ClassNotFoundException {
 
         PsqlService psqlService = new PsqlService();
         String stationsJson = psqlService.execute("SELECT * FROM stations");
@@ -38,12 +38,15 @@ public class StationService {
 
     //Used for importing static list of station json
     @POST
-    @Path("/post")
+    @Path("/stations")
     @Consumes("application/json")
-    public Response createStation(Station station){
+    public String createStation(Station station) throws ClassNotFoundException {
 
-        String result = "Station created: " + station;
-        return Response.status(201).entity(result).build();
+        PsqlService psqlService = new PsqlService();
+        String insertStatement = "INSERT INTO stations (elevation, location, name, timezone, triplet, wind) values (123, 'My Test Locvation', 'My Test Name', 123, '123test:CO:SNTL', false)";
+        String stationsJson = psqlService.execute(insertStatement);
+
+        return stationsJson;
     }
 
 
