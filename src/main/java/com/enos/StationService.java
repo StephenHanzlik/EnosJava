@@ -30,11 +30,8 @@ public class StationService {
     @Produces("application/json")
     public String getStation() throws IOException, ClassNotFoundException {
 
-    //This will be a look up in the DB
-        System.out.println("Calling GET /stations");
         PsqlService psqlService = new PsqlService();
-        String stationsJson = psqlService.connect();
-        System.out.println("did main run above?");
+        String stationsJson = psqlService.execute("SELECT * FROM stations");
 
         return stationsJson;
     }

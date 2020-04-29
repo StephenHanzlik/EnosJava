@@ -21,7 +21,7 @@ import com.google.gson.*;
 
 public class PsqlService {
 
-    private Object connect() throws ClassNotFoundException{
+    private Connection connect() throws ClassNotFoundException {
         String url = "jdbc:postgresql://localhost:5432/enos";
         String user = "enos";
         String password = "enos";
@@ -38,11 +38,12 @@ public class PsqlService {
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
 
-        return "there was a problem";
+        //This is hacky.  Need to handle the classes and exceptions better.
+        return connect();
 
     }
 
-    public String execute(String query) throws ClassNotFoundException{
+    public String execute(String query) throws ClassNotFoundException {
 
         try {
             Connection connection = connect();
@@ -61,7 +62,7 @@ public class PsqlService {
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
         //we really want to throw and exception
-        return "no station found exception";
+        return "no data found";
     }
 
 //    }
