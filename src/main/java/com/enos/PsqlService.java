@@ -20,24 +20,42 @@ import com.google.gson.*;
 
 
 public class PsqlService {
-//    should split up connect and retrieve stations
-    public String connect() throws ClassNotFoundException{
+
+    private Object connect() throws ClassNotFoundException{
         String url = "jdbc:postgresql://localhost:5432/enos";
         String user = "enos";
         String password = "enos";
 
-        try {
+        try{
+
             Class.forName("org.postgresql.Driver");
-            Connection con = DriverManager.getConnection(url, user, password);
-            Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * from stations;");
+            Connection connection = DriverManager.getConnection(url, user, password);
+
+            return connection;
+        }catch (SQLException ex) {
+
+            Logger lgr = Logger.getLogger(PsqlService.class.getName());
+            lgr.log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return "there was a problem";
+
+    }
+
+    public String execute(String query) throws ClassNotFoundException{
+
+        try {
+            Connection connection = connect();
+
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(query);
 
             List list = resultSetToArrayList(rs);
             String jsonString = arrayListToJSON(list);
 
             return jsonString;
 
-        } catch (SQLException ex) {
+        }catch (SQLException ex) {
 
             Logger lgr = Logger.getLogger(PsqlService.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
