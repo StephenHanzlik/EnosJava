@@ -19,12 +19,24 @@ public class Station {
         return name;
     }
 
-    public void setElevation(int elevation) {
-        this.elevation = elevation;
-    }
+    public String getLocation() { return location; }
 
     public int getElevation() {
         return elevation;
+    }
+
+    public boolean getWind() {
+        return wind;
+    }
+
+    public String getTriplet() {
+        return triplet;
+    }
+
+    public int getTimezone() { return timezone; }
+
+    public void setElevation(int elevation) {
+        this.elevation = elevation;
     }
 
     public void setLocation(String location) { this.location = location; }
@@ -33,14 +45,7 @@ public class Station {
         this.wind = wind;
     }
 
-    public boolean getWind() {
-        return wind;
-    }
-
     public void setTriplet(String triplet) { this.triplet = triplet; }
 
-    public String getTriplet() {
-        return triplet;
-    }
 
 }

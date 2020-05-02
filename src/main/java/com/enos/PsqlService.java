@@ -2,11 +2,7 @@ package com.enos;
 
 import com.enos.model.Station;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -14,7 +10,6 @@ import java.lang.ClassNotFoundException;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.sql.ResultSetMetaData;
 
 import com.google.gson.*;
 
@@ -43,7 +38,7 @@ public class PsqlService {
 
     }
 
-    public String execute(String query) throws ClassNotFoundException {
+    public String executeQuery(String query) throws ClassNotFoundException {
 
         try {
             Connection connection = connect();
@@ -61,8 +56,28 @@ public class PsqlService {
             Logger lgr = Logger.getLogger(PsqlService.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
-        //we really want to throw and exception
+        //TODO: We want to throw and exception
         return "no data found";
+    }
+
+    public int executeUpdate(String query) throws ClassNotFoundException {
+
+        try {
+            Connection connection = connect();
+
+            Statement st = connection.createStatement();
+//            List list = resultSetToArrayList(rs);
+//            String jsonString = arrayListToJSON(list);
+
+            return st.executeUpdate(query);
+
+        }catch (SQLException ex) {
+
+            Logger lgr = Logger.getLogger(PsqlService.class.getName());
+            lgr.log(Level.SEVERE, ex.getMessage(), ex);
+        }
+        //TODO: We want to throw and exception
+        return 0;
     }
 
 //    }

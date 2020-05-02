@@ -1,9 +1,10 @@
 package com.enos;
 
 import com.enos.model.Observation;
+import com.enos.model.Station;
 
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Map;
@@ -11,6 +12,8 @@ import java.util.Map;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 
 // https://github.com/FasterXML/jackson-databind/
 //https://mkyong.com/java/how-to-read-and-parse-csv-file-in-java/
@@ -57,6 +60,12 @@ public class CSVUtils {
         Gson gson = new Gson();
         String jsonArray = gson.toJson(mylist);
         return jsonArray;
+    }
+
+    public Station jsonToStation(String json){
+        Gson gson = new Gson();
+        Station station = gson.fromJson(json, Station.class);
+        return station;
     }
 
     public static List<String> parseLine(String cvsLine) {

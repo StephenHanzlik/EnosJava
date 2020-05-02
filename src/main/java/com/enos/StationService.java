@@ -31,7 +31,7 @@ public class StationService {
     public String getStation() throws ClassNotFoundException {
 
         PsqlService psqlService = new PsqlService();
-        String stationsJson = psqlService.execute("SELECT * FROM stations");
+        String stationsJson = psqlService.executeQuery("SELECT * FROM stations");
 
         return stationsJson;
     }
@@ -40,14 +40,39 @@ public class StationService {
     @POST
     @Path("/stations")
     @Consumes("application/json")
-    public String createStation(Station station) throws ClassNotFoundException {
+    @Produces("application/json")
+    public Response createStation(String reqBody) throws ClassNotFoundException {
 
+        CSVUtils csvUtils = new CSVUtils();
+        Station station = csvUtils.jsonToStation(reqBody);
+
+
+        //TODO: build DAO for this
         PsqlService psqlService = new PsqlService();
-        String insertStatement = "INSERT INTO stations (elevation, location, name, timezone, triplet, wind) values (123, 'My Test Locvation', 'My Test Name', 123, '123test:CO:SNTL', false)";
-        String stationsJson = psqlService.execute(insertStatement);
+        String insertStatement = "INSERT INTO stations (elevation, location, name, timezone, triplet, wind) values (" + station.getElevation() + ", \'" + station.getLocation()
+                + "\', \'" + station.getName() + "\', " + station.getTimezone() + ", \'" + station.getTriplet() + "\', " + station.getWind() + ")";
 
-        return stationsJson;
+
+        int updatedRowCount = psqlService.executeUpdate(insertStatement);
+
+        if(updatedRowCount > 0){
+            return Response.status(200).entity(reqBody).build();
+        }else{
+            return Response.status(500).entity("There was an internal server error").build();
+        }
+
     }
+
+//    @POST
+//    @Path("/test")
+//    @Consumes("application/json")
+//    public Response createProductInJSON(String station) {
+//
+//
+//        String result = "Product created : " + station;
+//        return Response.status(201).entity(result).build();
+//
+//    }
 
 
 }
