@@ -9,6 +9,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import javax.ws.rs.container.ContainerResponseFilter;
+
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -28,12 +31,14 @@ public class StationService {
     @GET
     @Path("/stations")
     @Produces("application/json")
-    public String getStation() throws ClassNotFoundException {
+    public Response getStation() throws ClassNotFoundException {
 
         PsqlService psqlService = new PsqlService();
-        String stationsJson = psqlService.executeQuery("SELECT * FROM stations");
+        String reqBody = psqlService.executeQuery("SELECT * FROM stations");
 
-        return stationsJson;
+        return Response.status(200)
+                .header("Access-Control-Allow-Origin", "*")
+                .entity(reqBody).build();
     }
 
     //TODO: lock this down with auth since this list is meant to be static and edited only with permissions
@@ -56,10 +61,36 @@ public class StationService {
         if(updatedRowCount > 0){
             //TODO: could abstract all this to a response service
             return Response.status(200).entity(reqBody).build();
+//                    .header("Access-Control-Allow-Origin", "*")
+//                    .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
+//                    .header("Access-Control-Allow-Credentials", "true")
+//                    .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
+//                    .header("Access-Control-Max-Age", "1209600")
+
         }else{
             return Response.status(500).entity("There was an internal server error").build();
         }
 
+    }
+
+    //********************************************************************
+    //Testing with cors and headers
+    //********************************************************************
+    @GET
+    @Consumes("application/json")
+    @Produces("application/json")
+    public Response getMemberList() {
+//        List<Member> memberList = memberDao.listMembers();
+//        members.addAll(memberList);
+        return Response
+                .status(200)
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
+                .header("Access-Control-Allow-Credentials", "true")
+                .header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD")
+                .header("Access-Control-Max-Age", "1209600")
+                .entity("a string")
+                .build();
     }
 
 }
