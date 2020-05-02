@@ -17,6 +17,8 @@ import com.google.gson.*;
 public class PsqlService {
 
     private Connection connect() throws ClassNotFoundException {
+
+        //TODO:  Get this password out of here and create live env passwords
         String url = "jdbc:postgresql://localhost:5432/enos";
         String user = "enos";
         String password = "enos";
@@ -33,7 +35,7 @@ public class PsqlService {
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
 
-        //This is hacky.  Need to handle the classes and exceptions better.
+        //TODO: Exception handling
         return connect();
 
     }
@@ -56,7 +58,7 @@ public class PsqlService {
             Logger lgr = Logger.getLogger(PsqlService.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
-        //TODO: We want to throw and exception
+        //TODO: Exception Handling
         return "no data found";
     }
 
@@ -66,8 +68,6 @@ public class PsqlService {
             Connection connection = connect();
 
             Statement st = connection.createStatement();
-//            List list = resultSetToArrayList(rs);
-//            String jsonString = arrayListToJSON(list);
 
             return st.executeUpdate(query);
 
@@ -76,11 +76,10 @@ public class PsqlService {
             Logger lgr = Logger.getLogger(PsqlService.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
-        //TODO: We want to throw and exception
+        //TODO: Exception Handling
         return 0;
     }
 
-//    }
     public List resultSetToArrayList(ResultSet rs) throws SQLException{
         ResultSetMetaData md = rs.getMetaData();
         int columns = md.getColumnCount();
@@ -96,9 +95,9 @@ public class PsqlService {
         return list;
     }
 
-    public String arrayListToJSON(List mylist) {
+    public String arrayListToJSON(List myList) {
         Gson gson = new Gson();
-        String jsonArray = gson.toJson(mylist);
+        String jsonArray = gson.toJson(myList);
         return jsonArray;
     }
 

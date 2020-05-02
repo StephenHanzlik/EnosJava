@@ -36,7 +36,7 @@ public class StationService {
         return stationsJson;
     }
 
-    //Used for importing static list of station json
+    //TODO: lock this down with auth since this list is meant to be static and edited only with permissions
     @POST
     @Path("/stations")
     @Consumes("application/json")
@@ -46,12 +46,10 @@ public class StationService {
         CSVUtils csvUtils = new CSVUtils();
         Station station = csvUtils.jsonToStation(reqBody);
 
-
         //TODO: build DAO for this
         PsqlService psqlService = new PsqlService();
         String insertStatement = "INSERT INTO stations (elevation, location, name, timezone, triplet, wind) values (" + station.getElevation() + ", \'" + station.getLocation()
                 + "\', \'" + station.getName() + "\', " + station.getTimezone() + ", \'" + station.getTriplet() + "\', " + station.getWind() + ")";
-
 
         int updatedRowCount = psqlService.executeUpdate(insertStatement);
 
@@ -62,17 +60,5 @@ public class StationService {
         }
 
     }
-
-//    @POST
-//    @Path("/test")
-//    @Consumes("application/json")
-//    public Response createProductInJSON(String station) {
-//
-//
-//        String result = "Product created : " + station;
-//        return Response.status(201).entity(result).build();
-//
-//    }
-
 
 }
