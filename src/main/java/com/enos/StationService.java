@@ -54,6 +54,7 @@ public class StationService {
         int updatedRowCount = psqlService.executeUpdate(insertStatement);
 
         if(updatedRowCount > 0){
+            //TODO: could abstract all this to a response service
             return Response.status(200).entity(reqBody).build();
         }else{
             return Response.status(500).entity("There was an internal server error").build();

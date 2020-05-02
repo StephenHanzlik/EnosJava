@@ -26,7 +26,8 @@ public class CSVUtils {
 
     Scanner scanner = new Scanner(file);
 
-    ArrayList observationsJson = new ArrayList(500); // May want to increase this if pulling 5+ years of data
+    //TODO: May want to increase this if pulling 5+ years of data
+    ArrayList observationsJson = new ArrayList(500);
 
     while (scanner.hasNext()) {
         List<String> line = parseLine(scanner.nextLine());
