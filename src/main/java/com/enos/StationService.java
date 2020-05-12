@@ -61,6 +61,7 @@ public class StationService {
         if(updatedRowCount > 0){
             //TODO: could abstract all this to a response service
             return Response.status(200).entity(reqBody).build();
+            //https://stackoverflow.com/questions/23450494/how-to-enable-cross-domain-requests-on-jax-rs-web-services
 //                    .header("Access-Control-Allow-Origin", "*")
 //                    .header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization")
 //                    .header("Access-Control-Allow-Credentials", "true")

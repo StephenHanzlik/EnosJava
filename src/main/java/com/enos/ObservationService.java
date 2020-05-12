@@ -5,6 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Response;
 
 import java.io.IOException;
 import java.util.*;
@@ -18,7 +19,7 @@ public class ObservationService {
     @GET
     @Path("/observations/{stationTriplet}")
     @Produces("application/json")
-    public String getObservation(
+    public Response getObservation(
             @PathParam("stationTriplet")
                     String stationTriplet,
             @QueryParam("from")
@@ -38,16 +39,20 @@ public class ObservationService {
         String observations = "No observations found";
 
         try {
-
             CSVUtils csvUtils = new CSVUtils();
             ArrayList observationsArrayList = csvUtils.convertCSVToJSON(resp);
             observations = csvUtils.arrayListToJSON(observationsArrayList);
-            return observations;
+//            return observations;
+            return Response.status(200)
+                    .header("Access-Control-Allow-Origin", "*")
+                    .entity(observations).build();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return observations;
+        return Response.status(500)
+                .header("Access-Control-Allow-Origin", "*")
+                .entity("Something went wrong").build();
     }
 
 }
