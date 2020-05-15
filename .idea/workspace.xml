@@ -9,15 +9,6 @@
     <list default="true" id="fd8bfedc-3edd-4669-bbb3-b1df59c0b5db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/precache-manifest.a42c855a8e5b6d1e1d53c6449b6e385f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/static/js/main.a0628a47.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/static/js/main.a0628a47.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/components/Button.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -108,11 +99,7 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -451,12 +438,12 @@
       <workItem from="1589502239160" duration="5471000" />
       <workItem from="1589555420723" duration="756000" />
       <workItem from="1589556241538" duration="43000" />
-      <workItem from="1589568897764" duration="4309000" />
+      <workItem from="1589568897764" duration="4910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152626000" />
+    <option name="totallyTimeSpent" value="153227000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,7 +478,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31066945" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.31135902" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.39858013" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3296146" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3296146" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.48478702" />
@@ -802,7 +789,7 @@
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -810,11 +797,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
