@@ -9,20 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import javax.ws.rs.container.ContainerResponseFilter;
 
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.IOException;
-import java.util.List;
-
-//No longer using these.  May be helpful for cleaning up unnecessary dependencies
-//https://mkyong.com/webservices/jax-rs/integrate-jackson-with-resteasy/
-//https://mkyong.com/webservices/jax-rs/restful-java-client-with-apache-httpclient/
-
-//Using These
 //https://www.baeldung.com/jackson-object-mapper-tutorial
 //http://tutorials.jenkov.com/java-json/jackson-objectmapper.html#write-json-from-objects
 @Path("/snotel")

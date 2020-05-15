@@ -1,0 +1,9 @@
+com/enos/model/Station.class
+com/enos/model/Observation.class
+com/enos/SnotelReportsService.class
+com/enos/CSVUtils.class
+com/enos/RestEasyService.class
+com/enos/PsqlService.class
+com/enos/StationService.class
+com/enos/HttpUtil.class
+com/enos/ObservationService.class
