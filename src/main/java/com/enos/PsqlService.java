@@ -18,13 +18,11 @@ public class PsqlService {
 
     private Connection connect() throws ClassNotFoundException {
 
-        //TODO:  Get this password out of here and create live env passwords
-        String url = "jdbc:postgresql://localhost:5432/enos";
-        String user = "enos";
-        String password = "enos";
+        String url = System.getenv("DB_URL");
+        String user = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
 
         try{
-
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(url, user, password);
 
