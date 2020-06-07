@@ -50,7 +50,7 @@ public class CSVUtils {
             ObjectMapper mapper = new ObjectMapper(); // create once, reuse
             Map<String, Object> observationMap = mapper.convertValue(observation, Map.class);
 
-            observationsJson.add(observationMap);
+                observationsJson.add(observationMap);
         }
     }
     scanner.close();

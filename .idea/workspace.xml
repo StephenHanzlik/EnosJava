@@ -8,14 +8,58 @@
   <component name="ChangeListManager">
     <list default="true" id="fd8bfedc-3edd-4669-bbb3-b1df59c0b5db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/PsqlService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/PsqlService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/EnosJava/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/EnosJava/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/PsqlService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/enos/PsqlService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/CSVUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/HttpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/ObservationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/PsqlService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/RestEasyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/SnotelReportsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/StationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/model/Observation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/classes/com/enos/model/Station.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/activation-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/async-http-servlet-3.0-3.0.14.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/commons-codec-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/commons-io-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/gson-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/httpclient-4.5.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/httpcore-4.4.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jackson-annotations-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jackson-core-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jackson-databind-2.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jboss-annotations-api_1.2_spec-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jboss-logging-3.1.4.GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/jcip-annotations-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/postgresql-42.2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/resteasy-client-3.0.14.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/resteasy-jaxrs-3.0.14.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/WEB-INF/lib/resteasy-servlet-initializer-3.0.14.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/result.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/static/css/main.4753fefa.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/static/css/main.4753fefa.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/EnosJava/static/media/landing-page-img.05e08212.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/CSVUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/HttpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/ObservationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/PsqlService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/RestEasyService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/SnotelReportsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/StationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/model/Observation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/enos/model/Station.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -54,19 +98,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2145">
-              <caret line="143" column="18" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/StationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="66" selection-start-line="66" selection-end-line="81" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/StationService.java">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state>
+              <caret column="12" selection-start-column="4" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console_7.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/ObservationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,8 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/PsqlService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+            <state relative-caret-position="225">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,69 +161,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+        <entry file="file://$PROJECT_DIR$/frontend/src/pages/Console.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/build/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="70" selection-start-column="70" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Graph.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="375">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/Map.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -225,7 +243,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/enos/model/Observation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/enos/model/Station.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console_6.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/enos/ObservationService.java" />
         <option value="$PROJECT_DIR$/target/EnosJava/index.html" />
         <option value="$PROJECT_DIR$/WEB-INF/web.xml" />
@@ -237,12 +254,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/frontend/src/components/Button.js" />
         <option value="$PROJECT_DIR$/frontend/src/App.js" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console.sql" />
         <option value="$PROJECT_DIR$/frontend/src/components/Map.js" />
-        <option value="$PROJECT_DIR$/frontend/src/pages/Console.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/enos/PsqlService.java" />
         <option value="$PROJECT_DIR$/frontend/package.json" />
         <option value="$PROJECT_DIR$/frontend/build/index.html" />
+        <option value="$PROJECT_DIR$/frontend/src/pages/Console.js" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console_7.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console.sql" />
       </list>
     </option>
   </component>
@@ -261,10 +280,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="210" />
-    <option name="y" value="151" />
-    <option name="width" value="1260" />
-    <option name="height" value="771" />
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -283,6 +301,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,14 +311,12 @@
             </path>
             <path>
               <item name="EnosJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EnosJava" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -378,6 +395,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 8.5.38" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.38" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="EnosJava:war">
@@ -515,12 +533,19 @@
       <workItem from="1590453282119" duration="277000" />
       <workItem from="1590453676816" duration="79000" />
       <workItem from="1590458356960" duration="23000" />
-      <workItem from="1590499795487" duration="2225000" />
+      <workItem from="1590499795487" duration="2544000" />
+      <workItem from="1590535909116" duration="3150000" />
+      <workItem from="1590592173852" duration="34000" />
+      <workItem from="1590608680961" duration="157000" />
+      <workItem from="1590865680553" duration="1291000" />
+      <workItem from="1590891338430" duration="2187000" />
+      <workItem from="1591224645394" duration="2156000" />
+      <workItem from="1591476285098" duration="827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171790000" />
+    <option name="totallyTimeSpent" value="181911000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -533,9 +558,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992785" visible="true" weight="0.27106228" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992785" visible="true" weight="0.18559219" />
       <window_info id="Structure" order="1" sideWeight="0.5007215" side_tool="true" weight="0.14376996" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -545,8 +569,8 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296146" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3378661" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.28093305" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27824268" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31380752" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3296146" />
@@ -555,10 +579,10 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31066945" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.35564855" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.31276152" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3296146" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3296146" />
-      <window_info anchor="bottom" id="Database Console" order="15" weight="0.45638946" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.45606694" />
       <window_info anchor="bottom" id="Dependency Viewer" order="16" weight="0.3296146" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -566,7 +590,7 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.10989011" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.18376069" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -620,6 +644,22 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="line.get(0)" />
@@ -629,55 +669,53 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>line.get(6)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>observation.setAirTemperatureAverage(line.get(5))</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.get(5)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.get(4)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.get(3)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.get(2)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.get(1)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>line.get(0)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>System.getenv()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>System.getenv(&quot;DB_PASSWORD&quot;)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>psqlService.executeUpdate(insertStatement)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>psqlService.execute(insertStatement)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>csvUtils.jsonToStation(reqBody)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>csvUtils.jsonToList(station)</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>rs.next()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>md.getColumnCount()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>rs.getMetaData()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/classes/public/precache-manifest.75668ffe0ba3f51630a9817e62bc1968.js" />
-    <entry file="file://$PROJECT_DIR$/target/classes/public/manifest.json" />
     <entry file="file://$PROJECT_DIR$/target/classes/public/index.html" />
     <entry file="file://$PROJECT_DIR$/target/classes/public/favicon.ico" />
     <entry file="file://$PROJECT_DIR$/target/classes/public/asset-manifest.json" />
@@ -724,16 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/SnotelReportsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/artifacts/EnosJava_war_exploded/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -755,16 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/ObservationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -815,33 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/pages/Console.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="32" column="98" selection-start-line="32" selection-start-column="98" selection-end-line="32" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2145">
-          <caret line="143" column="18" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/StationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/Graph.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -861,37 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/PsqlService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -902,7 +862,99 @@
     <entry file="file://$PROJECT_DIR$/frontend/build/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="70" selection-start-column="70" selection-end-column="70" />
+          <caret column="82" selection-start-column="82" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/SnotelReportsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console_7.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/ObservationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/PsqlService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/pages/Console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/95215af7-b688-477d-88bd-07a506fe204a/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="4" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/CSVUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/enos/StationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="66" selection-start-line="66" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
