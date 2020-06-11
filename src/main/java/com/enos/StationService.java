@@ -2,11 +2,7 @@ package com.enos;
 
 import com.enos.model.Station;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 
@@ -22,6 +18,22 @@ public class StationService {
 
         PsqlService psqlService = new PsqlService();
         String reqBody = psqlService.executeQuery("SELECT * FROM stations");
+
+        return Response.status(200)
+                .header("Access-Control-Allow-Origin", "*")
+                .entity(reqBody).build();
+    }
+
+    @GET
+    @Path("/stations/{stationTriplet}")
+    @Produces("application/json")
+    public Response getStation(
+            @PathParam("stationTriplet")
+                    String stationTriplet
+            ) throws ClassNotFoundException {
+
+        PsqlService psqlService = new PsqlService();
+        String reqBody = psqlService.executeQuery("SELECT * FROM stations where triplet="+ "'"+ stationTriplet + "'");
 
         return Response.status(200)
                 .header("Access-Control-Allow-Origin", "*")
