@@ -120,8 +120,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <first_editor relative-caret-position="15">
+                <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
               </first_editor>
               <second_editor />
             </state>
@@ -548,12 +548,12 @@
       <workItem from="1602626155868" duration="242000" />
       <workItem from="1602638823743" duration="245000" />
       <workItem from="1602720251342" duration="643000" />
-      <workItem from="1602944502845" duration="3575000" />
+      <workItem from="1602944502845" duration="3621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210084000" />
+    <option name="totallyTimeSpent" value="210130000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,7 +588,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31066945" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.31135902" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.35192698" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.3296146" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3296146" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.29497907" />
@@ -978,8 +978,8 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <first_editor relative-caret-position="15">
+            <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
           </first_editor>
           <second_editor />
         </state>

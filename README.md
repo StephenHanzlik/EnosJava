@@ -1,5 +1,5 @@
 ## About
-This is the java implementation of the back end for the Mountain Snowpack app.
+This is the java implementation of the Mountain Snowpack app.
 
 ## Front End Deploy:
 1) Replace the `src` directory in the `frontend` directory with the latest version of the front end.
