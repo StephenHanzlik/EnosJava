@@ -3,7 +3,7 @@ This is the java implementation of the Mountain Snowpack app.  DNS mapping for w
 
 For the React front end see: https://github.com/StephenHanzlik/Front_End
 
-For the beta version see: https://safe-reef-75908.herokuapp.com/
+For the deployed beta version see: https://safe-reef-75908.herokuapp.com/
 
 
 ## Front End Deploy:
