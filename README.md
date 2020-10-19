@@ -1,5 +1,5 @@
 ## About
-This is the java implementation of the Mountain Snowpack app.
+This is the java implementation of the Mountain Snowpack app.  For the React front end see - https://github.com/StephenHanzlik/Front_End
 
 ## Front End Deploy:
 1) Replace the `src` directory in the `frontend` directory with the latest version of the front end.
