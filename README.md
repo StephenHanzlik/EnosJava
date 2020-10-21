@@ -1,5 +1,5 @@
 ## About
-This is the java implementation of the Mountain Snowpack app.  DNS mapping for www.mountainsnowpack.com coming soon...
+This is the java implementation of the Mountain Snowpack app.  For deployed version visit www.mountainsnowpack.com
 
 For the React front end see: https://github.com/StephenHanzlik/Front_End
 
@@ -7,6 +7,7 @@ For the deployed beta version see: https://safe-reef-75908.herokuapp.com/
 
 DNS mapping to https://www.mountainsnowpack.com/ coming soon
 
+For the React front end see: https://github.com/StephenHanzlik/Front_End
 
 ## Front End Deploy:
 1) Replace the `src` directory in the `frontend` directory with the latest version of the front end.
