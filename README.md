@@ -1,5 +1,7 @@
 ## About
-This is the java implementation of the Mountain Snowpack app.  For deployed version visit www.mountainsnowpack.com
+This is the java implementation of the Mountain Snowpack app.  
+
+For the deployed version visit www.mountainsnowpack.com
 
 For the React front end see: https://github.com/StephenHanzlik/Front_End
 
