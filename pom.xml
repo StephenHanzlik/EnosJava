@@ -26,13 +26,14 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <failOnMissingWebXml>true</failOnMissingWebXml>
                     <webResources>
                         <resource>
                             <directory>${npm.output.directory}</directory>
                         </resource>
                     </webResources>
-                    </configuration>
+                    <webXml>${basedir}/web.xml</webXml>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
