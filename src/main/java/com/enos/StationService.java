@@ -25,15 +25,16 @@ public class StationService {
     }
 
     @GET
-    @Path("/stations/{stationTriplet}")
+    @Path("/stations/{stateAbbreviation}")
     @Produces("application/json")
     public Response getStation(
-            @PathParam("stationTriplet")
-                    String stationTriplet
+            @PathParam("stateAbbreviation")
+                    String stateAbbreviation
             ) throws ClassNotFoundException {
 
         PsqlService psqlService = new PsqlService();
-        String reqBody = psqlService.executeQuery("SELECT * FROM stations where triplet="+ "'"+ stationTriplet + "'");
+        String reqBody =
+                psqlService.executeQuery("SELECT * FROM stations WHERE triplet LIKE '%:" + stateAbbreviation.toUpperCase() +":%'");
 
         return Response.status(200)
                 .header("Access-Control-Allow-Origin", "*")

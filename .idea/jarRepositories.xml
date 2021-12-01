@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="identity-jwt-cloud-elements-github" />
+      <option name="name" value="GitHub Cloud Elements Java JWT Adaptor Github package repository" />
+      <option name="url" value="https://maven.pkg.github.com/cloud-elements/identity-java-jwt" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="api-cloud-elements-github" />
+      <option name="name" value="GitHub Api Cloud Elements Apache Maven Packages" />
+      <option name="url" value="https://maven.pkg.github.com/cloud-elements/api" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="dataops-model-cloud-elements-github" />
+      <option name="name" value="GitHub Cloud Elements Apache Maven Packages" />
+      <option name="url" value="https://maven.pkg.github.com/cloud-elements/dataops-model" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="JBoss repository" />
+      <option name="name" value="JBoss repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/groups/public-jboss/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="nexus-client-cloud-elements-github" />
+      <option name="name" value="GitHub Cloud Elements Nexus client Github package repository" />
+      <option name="url" value="https://maven.pkg.github.com/cloud-elements/nexus-java-client" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="java-platform-cloud-elements-github" />
+      <option name="name" value="Java Platform Github package repository" />
+      <option name="url" value="https://maven.pkg.github.com/cloud-elements/java-platform" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+  </component>
+</project>
